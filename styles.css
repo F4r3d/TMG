@@ -58,6 +58,7 @@ header {
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
+    
     .menu {
         flex-direction: column;
     }
@@ -67,8 +68,9 @@ header {
     }
 
     .background-section {
-        background-size: contain; /* Ajusta a imagem para caber na seção */
-        height: auto; /* Ajusta a altura automaticamente em dispositivos menores */
-        padding: 50px 0; /* Adiciona um padding para garantir espaço */
+        background-attachment: scroll; /* Melhor performance em mobile */
+        min-height: 400px; /* Altura menor para mobile */
+        height: 100vh;
+        background-position: center top; /* Ajuste o posicionamento conforme necessário */
     }
 }
