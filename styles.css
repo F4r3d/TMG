@@ -1,0 +1,70 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o corpo */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para o header */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.8); /* Cor de fundo com transparência */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Estilos para o menu */
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background-color: #575757;
+}
+
+/* Estilos para a seção com imagem de fundo */
+.background-section {
+    background-image: url('imagens/banner4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        text-align: center;
+    }
+}
