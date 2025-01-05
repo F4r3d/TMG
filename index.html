@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo Menos George</title>
+    <script src="navgaleria.js"></script>
+    <script src="contador.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#midia">Mídia</a></li>
+                <li><a href="#discografia">Discografia</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#imprensa">Kit de Imprensa</a></li>
+                <li><a href="#contato">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="background-section" id="inicio">
+    </section>
+    <script>
+        function toggleMenu() {
+        var menu = document.querySelector('.menu');
+        menu.classList.toggle('active');
+        }
+    </script>
+
+<section class="sobre-section" id="sobre">
+    <div class="text-sobre">
+        <h2>Sobre Nós</h2>
+        <p>Duo paulistano formado pelos músicos George Pagassini (contrabaixo, piano e voz) e Enrico Maresca (guitarra).</p>
+        <p>No atual trabalho, Tudo Menos George – Soul MPB Rock, foram selecionadas 14 canções autorais que contam muito sobre suas influências musicais.</p>
+        <p>A força da cidade de São Paulo como um grande liquidificador da música do mundo se faz presente desde a criação musical até a concepção dos arranjos.</p>
+        <p>Para além do entretenimento, o repertório traz a arte como premissa, possui harmonias elaboradas, letras sociais e poéticas envolvidas em melodias e ritmos contagiantes.</p>
+        <p>O Duo também conta com a colaboração de excelentes músicos de apoio em suas apresentações ao vivo:</p>
+        <p>Mônica Marianno e Marcelo Leoni ficam com os backing vocals, Ricardo Rix no violão, guitarra e teclado e Jeff se encarrega da bateria, percussão e samples.</p>
+    </div>
+    <div class="image-sobre">
+        <img src="imagens\about.png" alt="Músicos">
+    </div>
+</section>
+
+<section class="iframe-section" id="midia">
+    <div class="text-iframe">
+        <h2>Mídia</h2>
+    </div>
+    <div class="iframe-container">
+        <iframe src="https://open.spotify.com/embed/album/75LkFzhxigziJagHcKULKq?utm_source=generator&theme=0"
+        frameborder="0"
+        allow="encrypted-media"
+        class="left-iframe"> </iframe>
+        <iframe src="https://www.youtube.com/embed/B8PPdmxB7MQ?si=WhiSaEyMuiRdylvH"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen class="right-iframe"></iframe>
+    </div>
+    <div class="social-bar">
+        <a href="https://www.instagram.com/tudomenosgeorge/" class="social-icon" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/profile.php?id=61567435656408" class="social-icon" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+        <a href="https://www.youtube.com/@tudomenosgeorge" class="social-icon" target="_blank"><img src="icons/youtube.png" alt="Youtube"></a>
+        <a href="https://www.tiktok.com/@tudomenosgeorge"  class="social-icon" target="_blank"><img src="icons/tiktok.png" alt="TikTok"></a>
+    </div>
+   
+</section>
+
+<section class="discografia-section" id="discografia">
+    <div class="discografia-content">
+        <div class="image-discografia">
+            <h2>Discografia</h2>
+            <img src="imagens/capa.png" alt="capa do álbum">
+        </div>
+        <div class="text-discografia">
+            <h2>Tudo Menos George (2024)</h2><br>
+                <p>Flash</p>
+                <p>Espacial</p>
+                <p>Todos os sentidos</p>
+                <p>Namorado</p>
+                <p>Outro momento</p>
+                <p>Até você chegar</p>
+                <p>Pra depois</p>
+                <p>Qualquer coisa assim</p>
+                <p>O lugar e o momento</p>
+                <p>Um filme que eu invento</p>
+                <p>Fui ficando estranho</p>
+                <p>Toco minha lira enquanto Roma arde</p>
+                <p>Abstinência</p>
+                <p>Essa é pra você</p>
+        </div>
+    </div>
+
+    <div class="disco-bar">
+        <div class="disco-icons">
+            <a href="https://www.cifraclub.com.br/tudo-menos-george/" class="disco-icon" target="_blank"><img src="icons/cifra.png" alt="Cifra Club"></a>
+            <a href="https://www.letras.mus.br/tudo-menos-george/" class="disco-icon" target="_blank"><img src="icons/letras.png" alt="Letras"></a>
+        </div>
+    </div>
+</section>
+
+<section class="galeria" id="galeria">
+    <h2 class="galeria-topico">Galeria</h2>
+    <div class="carousel">
+    <button class="carousel-btn prev">←</button>
+    <div class="carousel-container">
+        <img src="imagens/foto1.png" alt="Foto 1">
+        <img src="imagens/foto2.png" alt="Foto 2">
+        <img src="imagens/foto3.png" alt="Foto 3">
+        <img src="imagens/foto4.png" alt="Foto 4">
+        <!-- Adicione mais imagens conforme necessário -->
+    </div>
+    <button class="carousel-btn next">→</button>
+    </div>
+</section>
+
+<section class="imprensa" id="imprensa">
+    <div class="imprensa-container">
+        <div class="imprensa-texto">
+            <h2>Kit de Imprensa (em breve)</h2>
+            <a href="https://www.sossegoproducoes.com.br/" target="_blank"><img src="imagens/logo_sossego.png" alt="logoSossego"></a>
+        </div>
+
+    </div>
+</section>
+
+<section class="contato-section"  id="contato">
+    <div class="contato-text">
+        <h2>Contato</h2>
+        <br>
+        <p><b>Comercial:</b></p>
+        <p><b><i>Edson Faria</i></b></p>
+        <p><a href="https://www.example.com" class="icon-fone" target="_blank">
+        <img src="icons/whatsappwhite.png" alt="WhatsApp" class="whatsapp">
+        </a></p>
+        <p>+55 11 99806-7848</p>                                                                 
+        <p><i>far3d@me.com</i></p>
+    </div>
+    <div class="contato-form">
+        <form action="enviar.php" method="POST">
+            <label for="nome" class="required">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email" class="required">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="fone">Fone:</label>
+            <input type="fone" id="fone" name="fone">
+            
+            <label for="mensagem" class="required">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        const offset = 40; // Ajuste conforme necessário
+
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 Tudo Menos George. Todos os direitos reservados.</p>
+        <div class="footer-links">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#midia">Mídia</a>
+            <a href="#discografia">Discografia</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#imprensa">Kit de Imprensa</a>
+            <a href="#contato">Contato</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/tudomenosgeorge/" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/profile.php?id=61567435656408" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/@tudomenosgeorge" target="_blank"><img src="icons/youtube.png" alt="Youtube"></a>
+            <a href="https://www.tiktok.com/@tudomenosgeorge" target="_blank"><img src="icons/tiktok.png" alt="TikTok"></a>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>

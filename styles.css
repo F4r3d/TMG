@@ -1,0 +1,723 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+}
+
+/* Estilos para o menu hambúrguer */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1000; /* Garante que o ícone fique acima dos outros elementos */
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Estilos para o header */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.8); /* Cor de fundo com transparência */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 999; /* Garante que o header fique acima do conteúdo */
+}
+
+/* Estilos para o menu */
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background-color: #575757;
+}
+
+/* Estilos para a seção com imagem de fundo */
+
+.background-section {
+    background-image: url('imagens/banner4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    /*ANALISAR: background-attachment: fixed;*/
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    padding: 0;
+    margin:0;
+}
+
+
+/* Estilos RESPONSIVOS */
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        display: none; /* Esconde o menu por padrão */
+        width: 100%;
+        background-color: rgba(51, 51, 51, 0.8);
+        position: absolute;
+        top: 60px; /* Ajusta a posição abaixo do menu hambúrguer */
+        left: 0;
+        z-index: 998; /* Garante que o menu fique acima do conteúdo */
+    }
+
+    .menu.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+    
+    .menu-icon {
+        display: flex; /* Exibe o ícone do menu hambúrguer */
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .menu a {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .background-section {
+        background-attachment: scroll; /* Melhor performance em mobile */
+        min-height: 400px; /* Altura menor para mobile */
+        height: 100vh;
+        background-position: center top; /* Ajuste o posicionamento conforme necessário */
+        padding: 50px 0; /* Adiciona um padding para garantir espaço */
+    }
+}
+
+/* Ajustes para orientação paisagem (horizontal) RESPONSIVO */
+@media (orientation: landscape) { 
+    .background-section {
+        height: 100vh;
+    }
+}
+/* Ajustes para orientação retrato (vertical) RESPONSIVO */
+@media (orientation: portrait) {
+    .background-section {
+        height: auto; /* Ajusta a altura automaticamente */
+        background-size: contain; /* Ajusta a imagem para caber na seção */
+    }
+}
+
+/* -- INíCIO sobre -- */
+
+.sobre-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 60px;
+    background-color: #8FA9B5;
+    box-sizing: border-box;
+}
+
+/* Estilos para o texto */
+.text-sobre {
+    flex: 1;
+    margin-left: 60px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.text-sobre h2 {
+    font-size: 2em;
+    margin-bottom: 60px;
+}
+
+.text-sobre p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+/* Estilos para a imagem */
+.image-sobre {
+    flex: 1;
+}
+
+.image-sobre img {
+    margin-left: 40px;
+    max-width: 70%;
+    height: auto;
+    display: block;
+}
+
+/* Ajustes RESPONSIVOS */
+@media (max-width: 768px) {
+    .sobre-section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        margin: 0;
+        width: 100%;
+        margin-top: -140px; /* Ajuste para remover espaço entre as seções */
+    }
+
+    .text-sobre {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .image-sobre {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* -- FIM sobre -- */
+
+
+/* -- INíCIO mídia -- */
+
+/* Estilo da Mídia */
+.iframe-section {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    padding-left: 60px; /* Adiciona espaçamento à esquerda */
+    padding-right: 60px; /* Adiciona espaçamento à direita */
+}
+
+/* Estilos para o texto */
+.text-iframe {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.text-iframe h2 {
+    font-size: 2em;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    color: #CBDCED
+}
+
+
+/* Container dos iframes */
+.iframe-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Estilos dos iframes - aumentados para desktop */
+.left-iframe, .right-iframe {
+    width: 650px; /* Mais largo */
+    height: 400px; /* Menos alto para ficar em formato paisagem */
+    border: none;
+}
+
+/* Barra social */
+.social-bar {
+    width: 100%;
+    /*max-width: 400px;*/
+    padding: 10px;
+    background-color: #8FA9B5;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Ícones menores */
+.social-icon img {
+    height: 40px; /* Reduzido de 30px para 20px */
+    width: auto;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Aumenta levemente o ícone ao passar o mouse */
+}
+
+/* Media query para smartphones */
+@media screen and (max-width: 768px) {
+    .iframe-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .left-iframe {
+        width: 90%;
+        height: 500px;
+        max-width: 400px;
+    }
+
+    .right-iframe {
+        width: 90%;
+        height: 250px;
+        max-width: 400px;
+    }
+
+    .social-bar {
+        width: 90%;
+        padding: 12px;
+    }
+
+    .social-icon img {
+        height: 18px; /* Ligeiramente menor em mobile */
+    }
+}
+
+
+/* -- FIM mídia -- */
+
+/* -- INÍCIO discografia -- */
+
+/* Estilos para a seção discografia */
+.discografia-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0;
+    background-color: #000000;
+    padding-left: 30px; /* Espaçamento à esquerda */
+    padding-right: 30px; /* Espaçamento à direita */
+}
+
+.discografia-content {
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+}
+
+.image-discografia h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    color: #CBDCED
+}
+
+/* Estilos para a imagem */
+.image-discografia {
+    flex: 1;
+    margin-right: 20px;
+    margin-left: 60px;
+}
+
+.image-discografia img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+/* Estilos para o texto */
+.text-discografia {
+    flex: 1;
+    margin-top: 70px;
+}
+
+.text-discografia h2 {
+    color: #CBDCED
+}
+
+.text-discografia p {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #CBDCED
+}
+
+.disco-bar {
+    width: 80%;
+    background-color: #8FA9B5; /* ou a cor que preferir */
+    margin-top: 20px;
+}
+
+.disco-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px; /* ou o valor que preferir */
+    margin: 0 auto;
+}
+
+.disco-icons a {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.disco-icons img {
+    max-height: 40px;
+    width: auto;
+
+}
+
+.disco-icons a:hover {
+    color: #666;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .discografia-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-discografia {
+        margin-left: 0;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .text-discografia {
+        width: 100%;
+    }
+}
+
+/* Media query para mobile */
+@media screen and (max-width: 768px) {
+    .discografia-content {
+        flex-direction: column;
+    }
+
+    .disco-bar {
+        width: 100%; /* Ocupa toda a largura em telas menores */
+        margin: 20px 0; /* Remove as margens laterais automáticas */
+    }
+
+    .disco-icons {
+        gap: 20px;
+    }
+
+    .disco-icons a {
+        font-size: 20px;
+    }
+}
+
+
+/* -- FIM discografia -- */
+
+/* -- INÍCIO galeria -- */
+
+.galeria {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria-topico {
+    color: #CBDCED;
+    font-size: 2em;
+    margin-left: 30px;
+    margin-bottom: 60px;
+    padding-left: 60px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* ajuste conforme necessário */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.carousel-container img {
+    width: 300px; /* ajuste conforme necessário */
+    height: auto;
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* -- FIM galeria -- */
+
+/* -- INÍCIO imprensa -- */
+
+.imprensa {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imprensa-container {
+    background-color: #8FA9B5;
+    margin-top: 60px;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.imprensa-texto {
+    flex: 1;
+}
+
+.imprensa-texto h2 {
+    color: #3F778C;
+    margin-top: 60px;
+    font-size: 2em;
+    margin-bottom: 60px;
+    padding-left: 60px;
+}
+
+.imprensa-texto img {
+    max-width: 180px;      /* Largura máxima da logo */
+    height: auto;          /* Mantém proporção da imagem */
+    margin-left: 80px;     /* Afasta da borda esquerda */
+    margin-bottom: 30px;   /* Afasta da borda inferior */
+    transition: transform 0.3s ease; /* Animação suave no hover */
+}
+
+.imprensa-texto img:hover {
+    transform: scale(1.1); /* Efeito de zoom suave no hover */
+}
+
+/* -- FIM imprensa -- */
+
+/* -- INÌCIO contato -- */
+
+/* Estilos para a seção de contato */
+.contato-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0;
+    background-color: #000000;
+ 
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 80px; /* Espaçamento à esquerda */
+    padding-right: 80px; /* Espaçamento à direita */
+}
+
+/* Estilos para o texto de contato */
+.contato-text {
+    flex: 1;
+    margin-right: 20px;
+    color: #3F778C;
+}
+
+.contato-text h2 {
+    margin-top: 60px;
+    font-size: 2em;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    color: #3F778C;
+}
+
+.contato-text p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 60px;
+    color: #3F778C;
+}
+
+.contato-text b {
+    color: #8FA9B5; /* Cor do texto */
+    font-size: 1.2em; /* Tamanho da fonte */
+}
+
+
+.icon-fone {
+    display: inline-block;
+    margin-right: 20px; /* Espaçamento entre o ícone e o texto */
+}
+
+.whatsapp {
+    width: 30px; /* Ajuste conforme necessário */
+    height: auto; /* Ajuste conforme necessário */
+}
+
+.fone {
+    font-size: 1.2em;
+    color: #3F778C;
+}
+
+/* Estilos para o formulário de contato */
+.contato-form {
+    flex: 1;
+    margin-top: 150px;
+}
+
+.contato-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #3F778C;
+}
+
+/* Adiciona asterisco vermelho após os labels dos campos required */
+label.required::after {
+    content: '*';
+    color: #FF746C;
+    margin-left: 3px;
+}
+
+.contato-form input,
+.contato-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contato-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8FA9B5; /* Cor do botão */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.contato-form button:hover {
+    background-color: #38524C; /* Cor do botão ao passar o mouse */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .contato-section {
+        flex-direction: column; /* Coloca o texto em cima e o formulário embaixo */
+        align-items: center;
+    }
+
+    .contato-text {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px; /* Espaço abaixo do texto */
+    }
+
+    .contato-form {
+        width: 100%;
+    }
+}
+
+/* -- FIM contato -- */
+
+/* -- INÍCIO footer -- */
+
+/* Estilos para o rodapé */
+.footer {
+    font-size: 1.2em;
+    background-color: #8FA9B5;
+    color: #3F778C;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: black;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #323D42;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links,
+    .footer-social {
+        margin-top: 10px;
+    }
+}
+
+/* -- FIM footer -- */
